@@ -17,3 +17,14 @@ script:
 
 after_script:
   - coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "AKIA6JT4FYO3SI4KTAOK"
+  secret_access_key:
+    secure: "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"
+  region: "us-west-2"
+  app: "django-tutorial"
+  env: "django-env-2"
+  bucket_name: "elasticbeanstalk-us-west-2-982734193591"
